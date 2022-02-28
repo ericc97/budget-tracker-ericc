@@ -32,7 +32,7 @@ request.onerror = (e) => {
 // run if new transaction is submitted offline
 function saveRecord(record) {
     // create new transaction with db
-    const transaction = db.transaction(['new_transaction', 'readwrite']);
+    const transaction = db.transaction(['new_transaction'], 'readwrite');
 
     const transactionObjectStore = transaction.objectStore('new_transaction');
 
