@@ -50,9 +50,11 @@
         navigator.serviceWorker
           .register('./service-worker.js')
           .then(() => console.log('Service Worker has been successfully registered'))
-          .catch((error) => console.log('Service Worker failed to register oopps', error))
+          .catch((error) => 
+            console.log('Service Worker failed to register oopps', error)
+        )
       }
-    })
+    })();
   </script>
 </body>
 </html>
